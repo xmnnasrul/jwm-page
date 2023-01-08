@@ -1,0 +1,9 @@
+.Contact {
+  margin-top: 10px;
+}
+
+.Contact .Title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}

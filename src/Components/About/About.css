@@ -1,0 +1,19 @@
+.About {
+  margin-top: 10px;
+}
+.About .Title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.About-Content {
+  display: flex;
+  justify-content: center;
+}
+.About-Content .Card {
+  border: 3px solid black;
+  border-radius: 20px;
+}
+.Card p {
+  text-align: justify;
+}

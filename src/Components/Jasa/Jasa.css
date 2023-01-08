@@ -1,0 +1,11 @@
+.Jasa-Content {
+  display: flex;
+}
+.Jasa-Content > .Card {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin: 20px;
+  float: left;
+}

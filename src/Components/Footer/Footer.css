@@ -1,0 +1,11 @@
+.Footer {
+  color: antiquewhite;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.copy {
+  color: black;
+}
