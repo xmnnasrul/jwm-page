@@ -1,3 +1,8 @@
 #Logo {
   width: 500px;
 }
+.Home-Content {
+  border: 2px solid black;
+  min-height: 100vh;
+  margin-top: 60px;
+}

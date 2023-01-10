@@ -4,16 +4,16 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Jasa from "./Components/Jasa/Jasa";
 import Contact from "./Components/Contact/Contact";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
+import Navbarr from "./Components/Navbar/Navbar";
 import Rules from "./Components/Rules/Rules";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Navbarr />
         <Routes>
           <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
@@ -23,7 +23,6 @@ function App() {
           <Route path="/*" element={<h1>Error page</h1>}></Route>
         </Routes>
       </Router>
-      <Footer />
     </div>
   );
 }
