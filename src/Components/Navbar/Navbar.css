@@ -1,6 +1,11 @@
-img {
-  width: 20px;
-}
 .Navbarr {
   position: fixed;
+}
+nav span {
+  font-size: 20px;
+  color: orange;
+  transition: all 0.3s ease;
+}
+nav span:hover {
+  color: white;
 }
