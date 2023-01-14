@@ -3,9 +3,12 @@ import './Footer.css'
 function Footer() {
     return (
         <>
-            <div className="Footer">
-                <p className='copy'>copyright</p>
-            </div>
+            <footer>
+                <div class="container">
+                    <p>Copyright © 2023 Jwmpedia</p>
+                </div>
+            </footer>
+
         </>
     )
 }

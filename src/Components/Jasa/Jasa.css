@@ -1,11 +1,47 @@
+.Jasa {
+  margin-top: 100px;
+}
 .Jasa-Content {
   display: flex;
+  justify-content: center;
 }
 .Jasa-Content > .Card {
+  padding: 10px;
   width: 300px;
   height: 500px;
   border-radius: 20px;
   border: 2px solid black;
   margin: 20px;
   float: left;
+}
+.Jasa-Content .Card .Card-Title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.Card .Submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Card .Card-Center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Jasa .Title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.Jasa-Content .Card form input {
+  margin: 2px;
+  width: 200px;
+}
+.Card form .Server {
+  display: flex;
+}
+.Card form .Server input {
+  width: 98px;
 }
