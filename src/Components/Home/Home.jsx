@@ -9,7 +9,7 @@ import './Home.css'
 function Home() {
 
     return (
-        <>
+        <div className='Home'>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                 <SwiperSlide><img src={Logo} alt="" /></SwiperSlide>
                 <SwiperSlide><img src={Logo} alt="" /></SwiperSlide>
@@ -21,7 +21,7 @@ function Home() {
                 <SwiperSlide>Slide 8</SwiperSlide>
                 <SwiperSlide>Slide 9</SwiperSlide>
             </Swiper>
-        </>
+        </div>
     )
 }
 

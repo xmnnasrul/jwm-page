@@ -2,11 +2,14 @@ import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import Logo from './../Assets/logo.png'
 function Navbarr() {
     return (
         <Navbar fixed='top' collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="#home">
+                    <img src={Logo} alt="logo" style={{ width: '50px' }} />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" className='justify-content-end'>
                     <Nav>
@@ -24,6 +27,9 @@ function Navbarr() {
                         </Nav.Link>
                         <Nav.Link>
                             <Link to="/rules" style={{ textDecoration: "none" }}><span>Rules</span></Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link to="/project" style={{ textDecoration: "none" }}><span>Project</span></Link>
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
