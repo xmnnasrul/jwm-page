@@ -10,7 +10,7 @@ function About() {
                 </div>
                 <div className="About-Content">
                     <div className="Card">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta in ipsum culpa sapiente mollitia cumque architecto vitae, accusamus dolores minima! Aliquid recusandae expedita dignissimos placeat culpa nam commodi odio necessitatibus incidunt, quia autem pariatur tenetur ab neque inventore alias quas aperiam repudiandae molestiae suscipit? Quae, facilis. Dolore nisi ratione quisquam distinctio ut? Nemo libero, sed inventore quidem hic iure quisquam aut architecto.</p>
+                        <p>Latar belakang munculnya jasa joki Mobile Legend didasarkan pada kesempatan yang diberikan kepada pemain untuk meningkatkan level, mendapatkan item atau meningkatkan ranking mereka dengan cara yang lebih cepat dan mudah. Beberapa pemain mungkin merasa kesulitan untuk mencapai tujuan mereka dalam game karena keterbatasan waktu, keterampilan atau faktor lainnya. Jasa joki menawarkan solusi untuk masalah ini dengan menyediakan pemain yang berpengalaman untuk memainkan game di akun pemain lain dengan tujuan untuk meningkatkan level, mendapatkan item atau meningkatkan ranking pemain. Namun, ini dianggap sebagai bentuk cheating dalam game dan dapat menyebabkan konsekuensi yang tidak diinginkan.</p>
                     </div>
                 </div>
             </div>
