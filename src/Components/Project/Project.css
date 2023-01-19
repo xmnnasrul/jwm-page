@@ -60,3 +60,13 @@
 .Project-Mobile .Card-Mobile img {
   width: 250px;
 }
+.Youtube {
+  position: relative;
+  justify-content: center;
+  margin-left: 5px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+.Card-Mobile .Youtube {
+  width: 100px;
+}

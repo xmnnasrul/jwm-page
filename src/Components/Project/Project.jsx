@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import YouTube, { YouTubeProps } from 'react-youtube';
 import Poster from './../Assets/poster jwm.jpg'
 import Logo from './../Assets/logo-project.png'
 import './Project.css'
+import YoutubeMobile from './YoutubeMobile';
 
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
@@ -17,6 +19,19 @@ function useWindowSize() {
 }
 
 function Project() {
+    const onPlayerReady: YouTubeProps['onReady'] = (event) => {
+        // access to player in all event handlers via event.target
+        event.target.pauseVideo();
+    }
+
+    const opts: YouTubeProps['opts'] = {
+        height: '250',
+        width: '350',
+        playerVars: {
+            autoplay: 1,
+        },
+    };
+
     const [width] = useWindowSize();
     return (
         <>
@@ -47,6 +62,15 @@ function Project() {
                                 </a>
                             </div>
                         </div>
+                        <div className="Card-Mobile">
+                            <div className="Card-Title">
+                                <h4>Video</h4>
+                            </div>
+                            {/* <div className='Youtube'>
+                                <YouTube videoId="gxtMUa783jY" autoplay='1' opts={opts} onReady={onPlayerReady} />
+                            </div> */}
+                            <YoutubeMobile />
+                        </div>
                     </div>
                 ) : (
                     <div className="Content-Project">
@@ -76,9 +100,9 @@ function Project() {
                             <div className="Card-Title">
                                 <h4>Video</h4>
                             </div>
-                            {/* <div style={{width: '500px', height: '300px'}} className="Card-Content Card-content-video">
-                            <ReactPlayer  url='https://youtu.be/gxtMUa783jY'/>
-                        </div> */}
+                            <div className='Youtube'>
+                                <YouTube videoId="gxtMUa783jY" autoplay='1' opts={opts} onReady={onPlayerReady} />
+                            </div>
                         </div>
                     </div>
                 )}
