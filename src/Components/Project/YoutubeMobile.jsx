@@ -8,7 +8,7 @@ function YoutubeMobile() {
     }
 
     const opts: YouTubeProps['opts'] = {
-        height: '250',
+        height: '240',
         width: '290',
         playerVars: {
             autoplay: 1,

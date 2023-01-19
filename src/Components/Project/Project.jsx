@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import YouTube, { YouTubeProps } from 'react-youtube';
+import Footer from './../Footer/Footer'
 import Poster from './../Assets/poster jwm.jpg'
 import Logo from './../Assets/logo-project.png'
 import './Project.css'
@@ -104,6 +105,7 @@ function Project() {
                                 <YouTube videoId="gxtMUa783jY" autoplay='1' opts={opts} onReady={onPlayerReady} />
                             </div>
                         </div>
+                        <Footer />
                     </div>
                 )}
 
