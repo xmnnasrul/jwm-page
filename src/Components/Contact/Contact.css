@@ -1,5 +1,6 @@
 .Contact {
   margin-top: 100px;
+  min-height: 100vh;
 }
 
 .Contact .Title {
@@ -7,12 +8,32 @@
   text-align: center;
   font-weight: bold;
 }
-.Contact-Content{
+.Contact-Content {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease;
 }
-.Contact-Content a{
+.Contact-Content a {
   margin: 30px;
+}
+.icon {
+  color: gray;
+}
+.icon:hover {
+  color: orange;
+}
+/* Mobile */
+.Contact-Mobile {
+  transition: all 0.5s ease;
+}
+.Contact-Mobile ul {
+  position: relative;
+  right: 15px;
+  text-align: center;
+}
+.Contact-Mobile ul li {
+  margin: 50px 0 50px 0;
+  list-style: none;
 }

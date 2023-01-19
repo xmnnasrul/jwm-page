@@ -1,5 +1,4 @@
 .Home-Content {
-  border: 2px solid black;
   min-height: 100vh;
   margin-top: 60px;
 }
@@ -40,6 +39,27 @@
   border-radius: 20px;
   margin-top: 130px;
 }
-.Home {
-  background-color: rgb(43, 39, 39);
+
+.Home-Mobile {
+  margin-top: 70px;
+  padding-top: 50%;
+  display: block;
+  text-align: center;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  background: url(./../Assets/hero.png);
+}
+.Home-Mobile h3 {
+  font-size: 60px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: -2px 2px 2px black, 2px -2px 2px black;
+}
+.Home-Mobile h4 {
+  text-shadow: -2px 2px 2px white, 2px -2px 2px white;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: italic;
 }
