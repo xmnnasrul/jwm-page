@@ -12,17 +12,17 @@ function Contact() {
                     <h2>Contact Me</h2>
                 </div>
                 <div className="Contact-Content">
-                <a>
-                    <SiWhatsapp size={60}/>
+                <a href='https://api.whatsapp.com/send/?phone=6281229250514&text&type=phone_number&app_absent=0'  rel="noreferrer"  target={'_blank'}>
+                    <SiWhatsapp size={80}/>
                 </a>
                 <a>
-                    <SiInstagram size={60}/>
+                    <SiInstagram size={80}/>
+                </a>
+                <a href='https://github.com/xmnnasrul?tab=repositories'  rel="noreferrer"  target={'_blank'}>
+                    <FaGithub size={80}/>
                 </a>
                 <a>
-                    <FaGithub size={60}/>
-                </a>
-                <a>
-                    <TfiEmail size={60}/>
+                    <TfiEmail size={80}/>
                 </a>
                 
                 

@@ -1,8 +1,7 @@
+import ReactPlayer from 'react-player'
 import React from 'react'
 import Poster from './../Assets/poster jwm.jpg'
-import VideoProject from './../Assets/jwm video.png'
-import VideoProjectPopUp from './../Assets/jwm video popup.mp4'
-import Logo from './../Assets/logo.png'
+import Logo from './../Assets/logo-project.png'
 import './Project.css'
 function Project() {
     return (
@@ -38,10 +37,8 @@ function Project() {
                         <div className="Card-Title">
                             <h4>Video</h4>
                         </div>
-                        <div className="Card-Content">
-                        <a href={VideoProjectPopUp} target="_blank" rel='noreferrer'>
-                            <img src={VideoProject} alt="video project" />
-                            </a>
+                        <div style={{width: '500px', height: '300px'}} className="Card-Content Card-content-video">
+                            <ReactPlayer  url='https://youtu.be/gxtMUa783jY'/>
                         </div>
                     </div>
                 </div>
