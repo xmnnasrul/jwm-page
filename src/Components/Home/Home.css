@@ -48,7 +48,7 @@
   background-size: cover;
   min-height: 100vh;
   color: white;
-  background: url(./../Assets/hero.png);
+  background: url(./../Assets/mobile.png);
 }
 .Home-Mobile h3 {
   font-size: 60px;
