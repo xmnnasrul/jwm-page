@@ -134,7 +134,7 @@
 
 /* popup */
 .popup-card {
-  background-color: white;
+  background-color: #ecfbe1;
   border: 2px solid #212121;
   width: 300px;
   height: 260px;
@@ -169,13 +169,13 @@
   font-size: 18px;
 }
 .popup-body .button {
-  background: #fff;
+  background: #25d366;
   backface-visibility: hidden;
   border-radius: 0.375rem;
   border-style: solid;
   border-width: 0.125rem;
   box-sizing: border-box;
-  color: #212121;
+  color: #dcf8c6;
   cursor: pointer;
   display: inline-block;
   font-family: Circular, Helvetica, sans-serif;
@@ -220,4 +220,71 @@
 }
 .popup-body .button:not(:disabled):active {
   transform: translateY(0.125rem);
+}
+
+/* mobile */
+.Jasa-Mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-bottom: 80px;
+}
+.Jasa-Mobile .Card {
+  width: 300px;
+  padding: 10px;
+  height: 350px;
+  border-radius: 20px;
+  margin: 20px;
+  float: left;
+}
+.Jasa-Mobile .Card .Card-Title {
+  margin-bottom: 10px;
+}
+.Jasa-Mobile .Card .Card-Title h5 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+.Jasa-Mobile .Card form .input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 18px;
+}
+.Jasa-Mobile .Card .custom-select {
+  background-color: lightgray;
+  color: black;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 200px;
+}
+.Jasa-Mobile .Card form .input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 18px;
+}
+.Jasa-Mobile .Card .custom-select {
+  background-color: lightgray;
+  color: black;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 200px;
+}
+.Jasa-Mobile .Card form input {
+  margin: 2px;
+  width: 200px;
+}
+.Card form .Server input {
+  width: 98px;
+}
+.Jasa-Mobile .Card .button-80 {
+  font-size: 15px;
+  font-weight: 600;
 }

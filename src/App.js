@@ -9,6 +9,7 @@ import Rules from "./Components/Rules/Rules";
 import Project from "./Components/Project/Project";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Error from "./Components/Error/Error";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/rules" element={<Rules />}></Route>
           <Route path="/project" element={<Project />}></Route>
-          <Route path="/*" element={<h1>Error page</h1>}></Route>
+          <Route path="/*" element={<Error />}></Route>
         </Routes>
       </Router>
     </div>

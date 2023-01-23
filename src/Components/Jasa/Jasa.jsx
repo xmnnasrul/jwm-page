@@ -1,10 +1,26 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BsWhatsapp } from 'react-icons/bs'
 import { SlClose } from 'react-icons/sl'
 import Footer from './../Footer/Footer'
 import './Jasa.css'
+
+// responsive
+function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useEffect(() => {
+        function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+        return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size
+}
 function Jasa() {
+    const [width] = useWindowSize();
+
     // popup
     const [popupPaket, setPopupPaket] = useState(false)
     const [popupBintang, setPopupBintang] = useState(false)
@@ -75,8 +91,7 @@ function Jasa() {
                 <div className="Title">
                     <h2>Jasa Joki</h2>
                 </div>
-                <div className="Jasa-Content">
-                    {/* Joki paketan */}
+                {width < 600 ? (<div className='Jasa-Mobile'>
                     <div className="Card">
                         <div className="Card-Title">
                             <h5>Jasa Joki Paket</h5>
@@ -177,7 +192,113 @@ function Jasa() {
                             </div>
                         </div>
                     }
-                </div>
+                </div>) : (
+
+
+                    <div className="Jasa-Content">
+                        {/* Joki paketan */}
+                        <div className="Card">
+                            <div className="Card-Title">
+                                <h5>Jasa Joki Paket</h5>
+                            </div>
+                            <div className='Card-Center'>
+                                <form action="#" autoComplete='off' onSubmit={handleSubmitPaket}>
+                                    <input className='input' type="text" placeholder='Username'
+                                        onChange={(e) => setUseramePaket(e.target.value)} value={usernamePaket}
+                                    />
+                                    <div className="Server">
+                                        <input className='input' type="tel" placeholder='ID'
+                                            onChange={(e) => setIdPaket(e.target.value)} value={idPaket}
+                                        />
+                                        <input className='input' type="tel" placeholder='Server'
+                                            onChange={(e) => setServerPaket(e.target.value)} value={serverPaket}
+                                        />
+                                    </div>
+                                    <div>
+                                        <select value={selectedOptionPaket} onChange={handleChangePaket} className="custom-select" >
+                                            <option value="error">Pilih Rank</option>
+                                            <option value="Master-GM">Master-GM</option>
+                                            <option value="GM-Epic">GM-Epic</option>
+                                            <option value="Epic-Legend">Epic-Legend</option>
+                                            <option value="Legend-Mythic">Legend-Mythic</option>
+                                        </select>
+                                    </div>
+                                    <div className="Submit ">
+                                        <button className='button-80' >Kirim</button >
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        {
+                            popupPaket &&
+                            <div>
+                                <div className="popup-card">
+                                    <div className="popup-header">
+                                        <h3>Terimakasih</h3>
+                                        <button className='close' style={{ color: "black", fontSize: "25px" }} onClick={handleClosePaket}><SlClose /></button>
+                                    </div>
+                                    <div className="popup-body">
+                                        <p>
+                                            Terimakasih sudah melakukakan pemesanan, untuk konfirmasi lebih lanjut silahkan hubungi lewat Whatsapp.
+                                        </p>
+                                        <button className='button'><BsWhatsapp /> Whatsapp</button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        {/* Joki per bintang */}
+                        <div className="Card">
+                            <div className="Card-Title">
+                                <h5>Jasa Joki per Bintang</h5>
+                            </div>
+                            <div className='Card-Center'>
+                                <form action="#" autoComplete='off' onSubmit={handleSubmitBintang}>
+                                    <input className='input' type="text" placeholder='Username'
+                                        onChange={(e) => setUsernameBintang(e.target.value)} value={usernameBintang} />
+                                    <div className="Server">
+                                        <input className='input' type="tel" placeholder='ID'
+                                            onChange={(e) => setIdBintang(e.target.value)} value={idBintang} />
+                                        <input className='input' type="tel" placeholder='Server'
+                                            onChange={(e) => setServerBintang(e.target.value)} value={serverBintang} />
+                                    </div>
+                                    <select value={selectedOptionBintang} style={{ marginBottom: "5px" }} onChange={handleChangeBintang} className="custom-select">
+                                        <option value="error">Pilih Rank</option>
+                                        <option value="Elite">Elite</option>
+                                        <option value="Master">Master</option>
+                                        <option value="Grandmaster">Grandmaster</option>
+                                        <option value="Epic">Epic</option>
+                                        <option value="Legend">Legend</option>
+                                        <option value="Mythic">Mythic</option>
+                                    </select>
+                                    <br></br>
+                                    <input className='input' type="tel" placeholder='Jumlah Bintang'
+                                        onChange={(e) => setJumlahBintang(e.target.value)} value={jumlahBintang} />
+                                    <div className="Submit">
+                                        <button className='button-80' >Kirim</button >
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        {
+                            popupBintang &&
+                            <div>
+                                <div className="popup-card">
+                                    <div className="popup-header">
+                                        <h3>Terimakasih</h3>
+                                        <button className='close' style={{ color: "black", fontSize: "25px" }} onClick={handleClosebintang}><SlClose /></button>
+                                    </div>
+                                    <div className="popup-body">
+                                        <p>
+                                            Terimakasih sudah melakukakan pemesanan, untuk konfirmasi lebih lanjut silahkan hubungi lewat Whatsapp.
+                                        </p>
+                                        <button className='button'><BsWhatsapp /> Whatsapp</button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                )}
             </div >
             <Footer />
         </div >
