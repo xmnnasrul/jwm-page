@@ -20,12 +20,6 @@
 .Jasa-Content .Card .Card-Title h5 {
   font-size: 20px;
 }
-.Card .Submit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
 .Card .Card-Center {
   display: flex;
   justify-content: center;

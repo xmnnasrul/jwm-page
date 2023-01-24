@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import { BsWhatsapp } from 'react-icons/bs'
+import Modal from 'react-modal';
 import { SlClose } from 'react-icons/sl'
 import Footer from './../Footer/Footer'
 import './Jasa.css'
@@ -18,10 +19,13 @@ function useWindowSize() {
     }, []);
     return size
 }
+
 function Jasa() {
     const [width] = useWindowSize();
 
     // popup
+    const [hargaPaket, setHargaPaket] = useState(false);
+    const [hargaBintang, setHargaBintang] = useState(false)
     const [popupPaket, setPopupPaket] = useState(false)
     const [popupBintang, setPopupBintang] = useState(false)
 
@@ -30,6 +34,13 @@ function Jasa() {
     }
     const handleClosebintang = () => {
         setPopupBintang(false)
+    }
+    const handleCloseHargaPaket = () => {
+        setHargaPaket(false)
+
+    }
+    const handleCloseHargaBintang = () => {
+        setHargaBintang(false)
     }
 
     // Select option
@@ -225,6 +236,7 @@ function Jasa() {
                                     </div>
                                     <div className="Submit ">
                                         <button className='button-80' >Kirim</button >
+                                        <button className='button-80' >Kirim</button >
                                     </div>
                                 </form>
                             </div>
@@ -274,12 +286,14 @@ function Jasa() {
                                     <br></br>
                                     <input className='input' type="tel" placeholder='Jumlah Bintang'
                                         onChange={(e) => setJumlahBintang(e.target.value)} value={jumlahBintang} />
-                                    <div className="Submit">
+                                    <div className="Submit ">
                                         <button className='button-80' >Kirim</button >
+                                        <button className='button-80' >Harga</button >
                                     </div>
                                 </form>
                             </div>
                         </div>
+
                         {
                             popupBintang &&
                             <div>
@@ -291,6 +305,23 @@ function Jasa() {
                                     <div className="popup-body">
                                         <p>
                                             Terimakasih sudah melakukakan pemesanan, untuk konfirmasi lebih lanjut silahkan hubungi lewat Whatsapp.
+                                        </p>
+                                        <button className='button'><BsWhatsapp /> Whatsapp</button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        {
+                            hargaBintang &&
+                            <div>
+                                <div className="popup-card">
+                                    <div className="popup-header">
+                                        <h3>Terimakasih</h3>
+                                        <button className='close' style={{ color: "black", fontSize: "25px" }} onClick={handleCloseHargaBintang}><SlClose /></button>
+                                    </div>
+                                    <div className="popup-body">
+                                        <p>
+                                            Terimakasih sudah melakukakan pemesanan, untuk konfirmasi lebih lanjut Whatsapp.
                                         </p>
                                         <button className='button'><BsWhatsapp /> Whatsapp</button>
                                     </div>
