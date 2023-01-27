@@ -30,32 +30,32 @@ function Contact() {
                 {width < 600 ? (
                     <div className='Contact-Mobile'>
                         <ul>
-                            <li><a href='#home' rel='noreferrer' target={'_blank'}>
+                            <li><a href='https://api.whatsapp.com/send/?phone=6281229250514&text&type=phone_number&app_absent=0' rel='noreferrer' target={'_blank'}>
                                 <BsWhatsapp size={80} className='icon' />
                             </a></li>
-                            <li><a href='#home'>
+                            <li><a href='https://www.instagram.com/_jokiwithme/' target={"_blank"} rel="noreferrer">
                                 <SiInstagram size={80} className='icon' />
                             </a></li>
                             <li><a href='https://github.com/xmnnasrul?tab=repositories' rel="noreferrer" target={'_blank'}>
                                 <FaGithub size={80} className='icon' />
                             </a></li>
-                            <li><a href='#home'>
+                            <li><a href={`mailto:jokiwith.me123@gmail.com?subject=Hello&body=Hello%20`}>
                                 <TfiEmail size={80} className='icon' />
                             </a></li>
                         </ul>
                     </div>
                 ) : (
                     <div className="Contact-Content">
-                        <a href='#home' rel="noreferrer" target={'_blank'}>
+                        <a href='https://api.whatsapp.com/send/?phone=6281229250514&text&type=phone_number&app_absent=0' rel="noreferrer" target={'_blank'}>
                             <FaWhatsapp className='icon' size={80} />
                         </a>
-                        <a href='#home'>
+                        <a href='https://www.instagram.com/_jokiwithme/' rel='noreferrer' target={'_blank'}>
                             <SiInstagram size={80} className="icon" />
                         </a>
                         <a href='https://github.com/xmnnasrul?tab=repositories' rel="noreferrer" target={'_blank'}>
                             <FaGithub size={80} className="icon" />
                         </a>
-                        <a href='#home'>
+                        <a href={`mailto:jokiwith.me123@gmail.com?subject=Hello&body=Hello%20`}  >
                             <TfiEmail size={80} className="icon" />
                         </a>
                     </div>
