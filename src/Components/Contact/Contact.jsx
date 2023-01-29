@@ -39,7 +39,7 @@ function Contact() {
                             <li><a href='https://github.com/xmnnasrul?tab=repositories' rel="noreferrer" target={'_blank'}>
                                 <FaGithub size={80} className='icon' />
                             </a></li>
-                            <li><a href={`mailto:jokiwith.me123@gmail.com?subject=Hello&body=Hello%20`}>
+                            <li><a href={`mailto:jokiwith.me123@gmail.com?subject=Hello&`}>
                                 <TfiEmail size={80} className='icon' />
                             </a></li>
                         </ul>
@@ -55,7 +55,7 @@ function Contact() {
                         <a href='https://github.com/xmnnasrul?tab=repositories' rel="noreferrer" target={'_blank'}>
                             <FaGithub size={80} className="icon" />
                         </a>
-                        <a href={`mailto:jokiwith.me123@gmail.com?subject=Hello&body=Hello%20`}  >
+                        <a href={`mailto:jokiwith.me123@gmail.com?subject=Hello`}  >
                             <TfiEmail size={80} className="icon" />
                         </a>
                     </div>

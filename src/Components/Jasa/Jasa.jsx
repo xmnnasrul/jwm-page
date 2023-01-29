@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
 import { BsWhatsapp } from 'react-icons/bs'
-import Modal from 'react-modal';
 import { SlClose } from 'react-icons/sl'
 import Footer from './../Footer/Footer'
 import './Jasa.css'
@@ -37,10 +36,11 @@ function Jasa() {
     }
     const handleCloseHargaPaket = () => {
         setHargaPaket(false)
-
+        setPopupPaket(false)
     }
     const handleCloseHargaBintang = () => {
         setHargaBintang(false)
+        setPopupBintang(false)
     }
 
     // Select option
@@ -130,7 +130,8 @@ function Jasa() {
                                     </select>
                                 </div>
                                 <div className="Submit ">
-                                    <button className='button-80' >Kirim</button >
+                                    <button className='button-80' onClick={() => setHargaPaket(true)} >Harga</button >
+                                    <button className='button-80' onClick={() => setPopupPaket(true)}>Kirim</button >
                                 </div>
                             </form>
                         </div>
@@ -148,6 +149,25 @@ function Jasa() {
                                         Terimakasih sudah melakukakan pemesanan, untuk konfirmasi lebih lanjut silahkan hubungi lewat Whatsapp.
                                     </p>
                                     <button className='button'><BsWhatsapp /> Whatsapp</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    {
+                        hargaPaket &&
+                        <div>
+                            <div className="popup-card">
+                                <div className="popup-header">
+                                    <h3>List Harga</h3>
+                                    <button className='close' style={{ color: "black", fontSize: "25px" }} onClick={handleCloseHargaPaket}><SlClose /></button>
+                                </div>
+                                <div className="popup-body">
+                                    <ul>
+                                        <li><span>Master-GM : Rp 50.000</span></li>
+                                        <li><span>Gm-Epic : Rp 70.000</span></li>
+                                        <li><span>Epic-Legend : Rp 125.000</span></li>
+                                        <li><span>Legend-Mythic : Rp 225.000</span></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +201,8 @@ function Jasa() {
                                 <input className='input' type="tel" placeholder='Jumlah Bintang'
                                     onChange={(e) => setJumlahBintang(e.target.value)} value={jumlahBintang} />
                                 <div className="Submit">
-                                    <button className='button-80' >Kirim</button >
+                                    <button className='button-80' onClick={() => setHargaBintang(true)}>Harga</button >
+                                    <button className='button-80' onClick={() => setPopupBintang(true)} >Kirim</button >
                                 </div>
                             </form>
                         </div>
@@ -203,10 +224,32 @@ function Jasa() {
                             </div>
                         </div>
                     }
+                    {
+                        hargaBintang &&
+                        <div>
+                            <div className="popup-card">
+                                <div className="popup-header">
+                                    <h3>List Harga</h3>
+                                    <button className='close' style={{ color: "black", fontSize: "25px" }} onClick={handleCloseHargaBintang}><SlClose /></button>
+                                </div>
+                                <div className="popup-body">
+                                    <ul>
+                                        <li><span>Elite : Rp 1.000</span></li>
+                                        <li><span>Master : Rp 2.000</span></li>
+                                        <li><span>Grandmaster : Rp 3.000</span></li>
+                                        <li><span>Epic : Rp 4.000</span></li>
+                                        <li><span>Legend : Rp 5.000</span></li>
+                                        <li><span>Mythic : Rp 5.500</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>) : (
 
 
                     <div className="Jasa-Content">
+
                         {/* Joki paketan */}
                         <div className="Card">
                             <div className="Card-Title">
@@ -235,8 +278,8 @@ function Jasa() {
                                         </select>
                                     </div>
                                     <div className="Submit ">
-                                        <button className='button-80' >Kirim</button >
-                                        <button className='button-80' >Kirim</button >
+                                        <button className='button-80' onClick={() => setHargaPaket(true)} >Harga</button >
+                                        <button className='button-80' onClick={() => setPopupPaket(true)} >Kirim</button >
                                     </div>
                                 </form>
                             </div>
@@ -254,6 +297,25 @@ function Jasa() {
                                             Terimakasih sudah melakukakan pemesanan, untuk konfirmasi lebih lanjut silahkan hubungi lewat Whatsapp.
                                         </p>
                                         <button className='button'><BsWhatsapp /> Whatsapp</button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        {
+                            hargaPaket &&
+                            <div>
+                                <div className="popup-card">
+                                    <div className="popup-header">
+                                        <h3>List Harga</h3>
+                                        <button className='close' style={{ color: "black", fontSize: "25px" }} onClick={handleCloseHargaPaket}><SlClose /></button>
+                                    </div>
+                                    <div className="popup-body">
+                                        <ul>
+                                            <li><span>Master-GM : Rp 50.000</span></li>
+                                            <li><span>Gm-Epic : Rp 70.000</span></li>
+                                            <li><span>Epic-Legend : Rp 125.000</span></li>
+                                            <li><span>Legend-Mythic : Rp 225.000</span></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -286,9 +348,9 @@ function Jasa() {
                                     <br></br>
                                     <input className='input' type="tel" placeholder='Jumlah Bintang'
                                         onChange={(e) => setJumlahBintang(e.target.value)} value={jumlahBintang} />
-                                    <div className="Submit ">
-                                        <button className='button-80' >Kirim</button >
-                                        <button className='button-80' >Harga</button >
+                                    <div className="Submit">
+                                        <button className='button-80' onClick={() => setHargaBintang(true)}>Harga</button >
+                                        <button className='button-80' onClick={() => setPopupBintang(true)} >Kirim</button >
                                     </div>
                                 </form>
                             </div>
@@ -316,14 +378,18 @@ function Jasa() {
                             <div>
                                 <div className="popup-card">
                                     <div className="popup-header">
-                                        <h3>Terimakasih</h3>
+                                        <h3>List Harga</h3>
                                         <button className='close' style={{ color: "black", fontSize: "25px" }} onClick={handleCloseHargaBintang}><SlClose /></button>
                                     </div>
                                     <div className="popup-body">
-                                        <p>
-                                            Terimakasih sudah melakukakan pemesanan, untuk konfirmasi lebih lanjut Whatsapp.
-                                        </p>
-                                        <button className='button'><BsWhatsapp /> Whatsapp</button>
+                                        <ul>
+                                            <li><span>Elite : Rp 1.000</span></li>
+                                            <li><span>Master : Rp 2.000</span></li>
+                                            <li><span>Grandmaster : Rp 3.000</span></li>
+                                            <li><span>Epic : Rp 4.000</span></li>
+                                            <li><span>Legend : Rp 5.000</span></li>
+                                            <li><span>Mythic : Rp 5.500</span></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
