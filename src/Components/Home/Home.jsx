@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 // import Loader from './Loader'
+import { Link } from 'react-router-dom';
 import "swiper/css";
 // import { Animated } from "react-animated-css";
 import "swiper/css/pagination";
@@ -39,13 +40,21 @@ function Home() {
                     <h3>Jwmpedia</h3>
                 </div>
             ) : (
-
                 <div>
-                    <Swiper slidesPerView={1} spaceBetween={30} keyboard={{ enabled: true }} pagination={{ dynamicBullets: true, clickable: true }} modules={[Pagination, Keyboard]} loop={[true]} className="mySwiper">
-                        <SwiperSlide><img src={Logo} alt="gambar1" /></SwiperSlide>
-                        <SwiperSlide><img src={HeroImg2} alt="gambar2" /></SwiperSlide>
-                        <SwiperSlide><img src={HomeImg} alt="gambar3" /></SwiperSlide>
-                    </Swiper>
+                    <div className='destop'>
+                        <Swiper slidesPerView={1} spaceBetween={30} keyboard={{ enabled: true }} pagination={{ dynamicBullets: true, clickable: true }} modules={[Pagination, Keyboard]} loop={[true]} className="mySwiper">
+                            <SwiperSlide><img src={Logo} alt="gambar1" /></SwiperSlide>
+                            <SwiperSlide><img src={HeroImg2} alt="gambar2" /></SwiperSlide>
+                            <SwiperSlide><img src={HomeImg} alt="gambar3" /></SwiperSlide>
+                        </Swiper>
+                    </div>
+                    <div className="welcome">
+                        <h1>selamat datang di website kami</h1>
+                        <h5>kami menyediakan jasa joki mobile legends dengan proses yang cepat dan terpercaya</h5>
+                        <Link to="/jasa" style={{ textDecoration: "none" }}>
+                            <button className='button-80'>Mau Joki Bang</button >
+                        </Link>
+                    </div>
                 </div>
             )}
         </div>
