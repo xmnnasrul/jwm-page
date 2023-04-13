@@ -52,7 +52,7 @@ function Home() {
                         <h1>selamat datang di website kami</h1>
                         <h5>kami menyediakan jasa joki mobile legends dengan proses yang cepat dan terpercaya</h5>
                         <Link to="/jasa" style={{ textDecoration: "none" }}>
-                            <button className='button-80'>Mau Joki Bang</button >
+                            <button className='button-80 font-width' >Mau Joki Bang</button >
                         </Link>
                     </div>
                 </div>

@@ -28,13 +28,13 @@
   align-items: center;
 }
 
-.welcome{
+.welcome {
   text-align: center;
   font-family: "Poppins", sans-serif;
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.welcome button{
+.welcome button {
   margin-top: 10px;
 }
 .swiper-slide img {
@@ -74,4 +74,7 @@
   font-size: 50px;
   font-weight: bold;
   font-style: italic;
+}
+.font-width {
+  font-weight: 500;
 }
